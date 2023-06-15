@@ -1,0 +1,23 @@
+.fixedBottom {
+  position: fixed !important;
+  bottom: 0 !important;
+  width: 100%;
+}
+html {
+  background-color: #111;
+  overscroll-behavior-y: none;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch; /* enables “momentum” (smooth) scrolling */
+}
+
+h2 {
+  color: white;
+}
+h1 {
+  color: white;
+}
+p {
+  color: white;
+}
