@@ -1,12 +1,16 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
+import "./AnnouncementCard.css";
 
 function AnnouncementCard(props) {
   const { announcement } = props;
 
   return (
     <div className="AnnouncementContent">
-      <div className="card" style={{ backgroundColor: '#272727', color: 'white' }}>
+      <div
+        className="card"
+        style={{ backgroundColor: "#272727", color: "white" }}
+      >
         <div className="card-header">
           <h6 className="card-title">
             <i className="mdi mdi-message-reply-text-outline iconButtonPadding"></i>
@@ -20,7 +24,9 @@ function AnnouncementCard(props) {
 
         <div className="card-footer">
           <Link
-            to={`/announcement/${parseInt(announcement.course.id)}/${parseInt(announcement.id)}`}
+            to={`/announcement/${parseInt(announcement.course.id)}/${parseInt(
+              announcement.id
+            )}`}
             className="btn btn-link"
           >
             View
