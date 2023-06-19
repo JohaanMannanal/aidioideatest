@@ -1,11 +1,11 @@
 {
-  "name": "assignment-canvas",
+  "name": "aidioideatest",
   "version": "2.5.0",
   "lockfileVersion": 2,
   "requires": true,
   "packages": {
     "": {
-      "name": "assignment-canvas",
+      "name": "aidioideatest",
       "version": "2.5.0",
       "dependencies": {
         "axios": "^0.27.2",
