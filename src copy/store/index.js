@@ -15,10 +15,10 @@ export default new Vuex.Store({
     user: {
       // id: "d596285e-0327-40fd-94f7-77c0ed5b630f",
       // name: "Todd Rylaarsdam",
-      // email: "trylaarsdam22@georgefox.edu",
+      // email: "JohaanMannanal22@georgefox.edu",
       // role: "Administrator",
       // password: "test13245",
-      // username: "trylaarsdam",
+      // username: "JohaanMannanal",
       // canvasURL: "https://georgefox.instructure.com",
     },
     showAppBar: true,
