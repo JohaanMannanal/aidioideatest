@@ -69,5 +69,4 @@ class CoursesView extends React.Component {
     );
   }
 }
-
 export default CoursesView;
