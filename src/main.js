@@ -1,19 +1,14 @@
-import Vue from 'vue'
-import App from './App.vue'
-import './registerServiceWorker'
-import router from './router'
-import store from './store'
-import vuetify from './plugins/vuetify'
-const VueCookies = require("vue-cookies");
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+import * as serviceWorker from "./serviceWorker";
+import { BrowserRouter as Router } from "react-router-dom";
 
-Vue.use(VueCookies, { expire: '7d' });
+ReactDOM.render(
+  <Router>
+    <App />
+  </Router>,
+  document.getElementById("app")
+);
 
-Vue.config.productionTip = false
-
-new Vue({
-  router,
-  store,
-  vuetify,
-  render: h => h(App)
-}).$mount('#app')
-
+serviceWorker.register();

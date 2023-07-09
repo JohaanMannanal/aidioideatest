@@ -1,0 +1,19 @@
+.no-padding {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.centered {
+  margin: 0;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+-webkit-scrollbar {
+  display: none;
+}
+html {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}

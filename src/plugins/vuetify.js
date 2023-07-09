@@ -1,7 +1,16 @@
-import Vue from 'vue';
-import Vuetify from 'vuetify/lib/framework';
+import React from "react";
+import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 
-Vue.use(Vuetify);
-
-export default new Vuetify({
+const theme = createMuiTheme({
+  // Customize the theme here
 });
+
+const App = () => {
+  return (
+    <ThemeProvider theme={theme}>
+      {/* Your application content */}
+    </ThemeProvider>
+  );
+};
+
+export default App;

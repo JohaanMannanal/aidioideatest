@@ -1,0 +1,27 @@
+.loading {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.assignmentContainer {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.buttonPadding {
+  margin-right: 10px;
+}
+.courseViewContainer {
+  margin: -11px;
+}
+.iconButtonPadding {
+  padding-right: 10px;
+}
+h2 {
+  color: white;
+}
+h1 {
+  color: white;
+}

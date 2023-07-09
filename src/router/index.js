@@ -1,83 +1,44 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import HomeView from "../views/HomeView";
+import ProfileView from "../views/ProfileView";
+import FeedView from "../views/FeedView";
+import AnnouncementsView from "../views/AnnouncementsView";
+import CoursesView from "../views/CoursesView";
+import AssignmentsView from "../views/AssignmentsView";
+import AssignmentView from "../views/AssignmentView";
+import AnnouncementView from "../views/AnnouncementView";
+import CourseView from "../views/CourseView";
+import CourseRosterView from "../views/CourseRosterView";
+import AdminView from "../views/AdminView";
+import AuthBannedView from "../views/AuthBannedView";
 
-Vue.use(VueRouter)
+const AppRouter = () => {
+  return (
+    <Router>
+      <Switch>
+        <Route exact path="/" component={HomeView} />
+        <Route path="/profile" component={ProfileView} />
+        <Route path="/feed" component={FeedView} />
+        <Route path="/announcements" component={AnnouncementsView} />
+        <Route path="/courses" component={CoursesView} />
+        <Route path="/assignments" component={AssignmentsView} />
+        <Route
+          path="/assignment/:courseID/:assignmentID"
+          component={AssignmentView}
+        />
+        <Route
+          path="/announcement/:courseID/:announcementID"
+          component={AnnouncementView}
+        />
+        <Route path="/course/:id" component={CourseView} />
+        <Route path="/course/:id/roster" component={CourseRosterView} />
+        <Route path="/admin" component={AdminView} />
+        <Route path="/user/:id" component={UserManagerView} />
+        <Route path="/auth/banned" component={AuthBannedView} />
+      </Switch>
+    </Router>
+  );
+};
 
-const routes = [
-  {
-    path: '/',
-    name: 'home',
-    component: HomeView
-  },
-  {
-    path: "/profile",
-    name: "profile",
-    component: () => import(/* webpackChunkName: "profile" */ "../views/ProfileView.vue")
-  },
-  {
-    path: '/feed',
-    name: 'feed',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "feed" */ '../views/FeedView.vue')
-  },
-  {
-    path: "/announcements",
-    name: "announcements",
-    component: () => import(/* webpackChunkName: "announcements" */ '../views/AnnouncementsView.vue')
-  },
-  {
-    path: "/courses",
-    name: "courses",
-    component: () => import(/* webpackChunkName: "courses" */ '../views/CoursesView.vue')
-  },
-  {
-    path: "/assignments",
-    name: "assignments",
-    component: () => import(/* webpackChunkName: "assignments" */ '../views/AssignmentsView.vue')
-  },
-  {
-    path: "/assignment/:courseID/:assignmentID",
-    name: "assignment",
-    component: () => import(/* webpackChunkName: "assignments" */ '../views/AssignmentView.vue')
-  },
-  {
-    path: "/announcement/:courseID/:announcementID",
-    name: "announcement",
-    component: () => import(/* webpackChunkName: "announcements" */ '../views/AnnouncementView.vue')
-  },
-  {
-    path: "/course/:id",
-    name: "course",
-    component: () => import(/* webpackChunkName: "course" */ '../views/CourseView.vue')
-  },
-  {
-    path: "/course/:id/roster",
-    name: "course-roster",
-    component: () => import(/* webpackChunkName: "course-roster" */ '../views/CourseRosterView.vue')
-  },
-  {
-    path: "/admin",
-    name: "admin-panel",
-    component: () => import(/* webpackChunkName: "admin-panel" */ "../views/AdminView.vue")
-  },
-  {
-    path: "/user/:id",
-    name: "user-manager"
-  },
-  {
-    path: "/auth/banned",
-    name: "banned",
-    component: () => import(/* webpackChunkName: "admin-panel" */ "../views/AuthBannedView.vue")
-  }
-]
-
-const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes
-})
-
-export default router
+export default AppRouter;
